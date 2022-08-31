@@ -20,7 +20,13 @@ app.get("/todos", async (req, res) => {
 })
 // Get specific todo
 app.get("/todos/:id", async (req, res) => {
-  console.log(req.params)
+  try {
+    const { id } = req.params;
+    const todo = await pool.query("SELECT * FROM todo WHERE todo_id = $1", [id])
+    res.json(todo.rows[0]);
+  } catch (err) {
+    console.error(err.message);
+  }
 })
 
 //create todo
