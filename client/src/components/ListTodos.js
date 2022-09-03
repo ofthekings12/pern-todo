@@ -9,7 +9,7 @@ export default function ListTodos() {
       const res = await fetch (`http://localhost:3000/todos/${id}`, {
         method: "DELETE"
       });
-      console.log(res);
+      setTodos(todos.filter(todo => todo.todo_id !== id))
     } catch (err) {
       console.error(err.message)
     }
