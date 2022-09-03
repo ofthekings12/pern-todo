@@ -15,13 +15,13 @@ export default function EditTodos() {
 
      {/* Modal Header */}
       <div class="modal-header">
-        <h4 class="modal-title">Modal Heading</h4>
+        <h4 class="modal-title">Edit Todo</h4>
         <button type="button" class="close" data-dismiss="modal">&times;</button>
       </div>
 
       {/* Modal body */}
       <div class="modal-body">
-        Modal body..
+        <input type="text" className="form-control"/>
       </div>
 
       {/* Modal footer */}
