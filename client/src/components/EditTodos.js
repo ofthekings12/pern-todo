@@ -4,7 +4,7 @@ export default function EditTodos() {
   return (
     <Fragment>
       {/* Button to Open the Modal */}
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+<button type="button" class="btn btn-warning" data-toggle="modal" data-target="#myModal">
   Edit
 </button>
 
