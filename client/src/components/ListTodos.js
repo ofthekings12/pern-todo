@@ -34,7 +34,7 @@ export default function ListTodos() {
       <td>@mdo</td>
     </tr> */}
           {todos.map((todo) => (
-            <tr>
+            <tr key={todo.todo_id}>
               <td>{todo.description}</td>
               <td>Edit</td>
               <td>
