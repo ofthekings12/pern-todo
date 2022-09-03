@@ -1,6 +1,8 @@
-import React, {Fragment, usestate} from 'react'
+import React, {Fragment, useState} from 'react'
 
-export default function EditTodos() {
+export default function EditTodos({ todo }) {
+
+  const [description, setDescription] = useState(todo.description);
   return (
     <Fragment>
       {/* Button to Open the Modal */}
@@ -21,11 +23,13 @@ export default function EditTodos() {
 
       {/* Modal body */}
       <div class="modal-body">
-        <input type="text" className="form-control"/>
+        <input type="text" className="form-control" value={description}/>
       </div>
 
       {/* Modal footer */}
       <div class="modal-footer">
+      <button type="button" class="btn btn-warning" data-dismiss="modal">Edit</button>
+
         <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
       </div>
 
