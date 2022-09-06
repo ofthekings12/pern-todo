@@ -13,7 +13,7 @@ const editText = async (id) => {
       body: JSON.stringify(body)
 
     })
-    console.log(res)
+    window.location = "/";
   } catch (err) {
     console.error(err.message)
   }
